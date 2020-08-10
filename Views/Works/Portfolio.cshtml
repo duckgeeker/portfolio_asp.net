@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Portfolio.Models.Work>
+@{
+    ViewData["Title"] = "Portfolio Page";
+}
+<!DOCTYPE html>
+
+
+<h3>Page of works</h3>
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            @foreach (var work in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" style="border-radius:.8rem; max-height:300px; overflow:hidden;">
+                        <img src="https://content.freelancehunt.com/snippet/0d034/4956e/1180840/banner.png" class="bd-placeholder-img card-img-top img-fluid" width="100%" height="225" style="border-radius: .8rem;">
+                        <div class="carousel-caption text-left" style="left:0; right:0; bottom:0px; padding:0px;">
+                            <div class="card-body">
+                                <p style="margin-bottom: 5px;">@work.desc_short</p>
+                                <div class="d-flex justify-content-between align-items-center row">
+                                    <div class="btn-group col">
+                                        <button type="button" href="~/Main/Buy/@work.work_id" class="btn btn-sm btn-outline-secondary">(..)</button>
+                                    </div>
+                                    <p class="text-muted col" style="margin-bottom:0px; padding-left:0px;">@work.tools</p>
+                                    <small class="text-muted col">9 mins</small>
+                                    <div class="btn-group col">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">/</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

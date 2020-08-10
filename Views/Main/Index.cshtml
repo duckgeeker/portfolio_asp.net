@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Portfolio.Models.Work>
+@{
+    ViewData["Title"] = "Portfolio";
+}
+<!DOCTYPE html>
+
+
+<h3>Works</h3>
+<table>
+    <tr>
+        <td>Name work</td>
+        <td>Description</td>
+        <td>Tools</td>
+        <td></td>
+    </tr>
+    @foreach (var work in Model)
+    {
+        <tr>
+            <td>@work.desc_short</td>
+            <td>@work.desc_long</td>
+            <td>@work.tools</td>
+            <td><a href="~/Main/Buy/@work.work_id">Купить</a></td>
+        </tr>
+    }
+</table>
