@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/style.css">
 </head>
 <body>
+    @await Html.PartialAsync("_Header")
     <!--меню-->
     <nav class="navbar navbar-inverse">
         <div class="container">
@@ -22,9 +23,8 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>© 2020 - NOTFOUNDGAME</p>
-        </footer>
+
+        @await Html.PartialAsync("_Footer")
     </div>
 </body>
 </html>

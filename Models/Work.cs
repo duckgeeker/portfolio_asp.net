@@ -14,5 +14,6 @@ namespace Portfolio.Models
         public string desc_long { get; set; }
         public string image { get; set; }
         public string tools { get; set; }
+        //public string type { get; set; }
     }
 }

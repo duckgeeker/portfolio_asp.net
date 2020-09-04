@@ -10,6 +10,7 @@ namespace Portfolio.Models
     {
         public DbSet<Work> Works { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         public PortfolioContext(DbContextOptions<PortfolioContext> options) : base(options)
         {
